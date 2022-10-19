@@ -1,0 +1,19 @@
+@media (min-width: 1164px) {
+  li.supervisor {
+    order: 1;
+  }
+
+  li.team-builder {
+    order: 1;
+  }
+
+  li.karma {
+    order: 3;
+    margin-top: -140px;
+  }
+
+  li.calculator {
+    order: 2;
+    margin-top: 140px;
+  }
+}

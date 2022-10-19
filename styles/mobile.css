@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Design system styles */
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.four-card-section-header {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.four-card-section-header h2,
+.four-card-section-header h1 {
+  font-weight: 200;
+  font-size: clamp(24px, 6.4vw, 36px);
+  line-height: clamp(36px, 9.6vw, 54px);
+  letter-spacing: clamp(0.17px, 0.0045vw, 0.25px);
+  width: clamp(297px, 78.9vw, 444px);
+}
+
+.four-card-section-header h1 {
+  font-weight: 600;
+}
+
+.four-card-section-header p {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.104167px;
+  width: clamp(311px, 83vw, 540px);
+  color: var(--grayish-blue);
+}
+
+.four-card-section-main {
+  margin-top: 76px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 32px 80px 32px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 25px;
+  max-width: 1110px;
+}
+
+.card {
+  background: #ffffff;
+  width: clamp(311px, 83vw, 350px);
+  height: clamp(195px, 60vw, 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card .line {
+  width: 100%;
+  height: 3.55px;
+}
+
+.card.supervisor .line {
+  background-color: var(--cyan);
+}
+
+.card.team-builder .line {
+  background-color: var(--red);
+}
+
+.card.karma .line {
+  background-color: var(--orange);
+}
+
+.card.calculator .line {
+  background-color: var(--blue);
+}
+
+.card h3 {
+  margin-top: 24px;
+  margin-left: 28px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.card p {
+  margin-top: 1px;
+  margin-left: 28px;
+  margin-right: 28px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.0902778px;
+  color: var(--grayish-blue);
+  text-align: left;
+  transition: all ease 0.2s;
+}
+
+.card img {
+  width: clamp(57px, 15.2vw, 64px);
+  margin-bottom: 28px;
+  margin-top: auto;
+  margin-right: 28px;
+  margin-left: auto;
+}
+
+.attribution {
+  font-family: 'Montserrat', 'sans-serif';
+  flex: none;
+  padding: 10px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--soft-blue);
+  color: var(--very-dark-blue-main-bg);
+}
+
+.attribution a,
+.attribution a:visited {
+  text-decoration: underline;
+  color: var(--very-dark-blue-main-bg);
+}
+
+.attribution a:hover {
+  font-weight: 500;
+}
