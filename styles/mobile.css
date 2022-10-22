@@ -40,8 +40,7 @@ body {
   align-items: center;
 }
 
-.four-card-section-header h1,
-.four-card-section-header h2 {
+.four-card-section-header h1 {
   font-weight: 200;
   font-size: clamp(24px, 6.4vw, 36px);
   line-height: clamp(36px, 9.6vw, 54px);
@@ -49,7 +48,7 @@ body {
   width: clamp(297px, 78.9vw, 444px);
 }
 
-.four-card-section-header h2 {
+.four-card-section-header h1 span {
   font-weight: 600;
 }
 
@@ -116,7 +115,7 @@ body {
   background-color: var(--blue);
 }
 
-.card h1 {
+.card h2 {
   margin-top: 24px;
   margin-left: 28px;
   font-weight: 600;
