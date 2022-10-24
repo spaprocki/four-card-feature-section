@@ -13,17 +13,10 @@
   --very-light-gray: hsl(0, 0%, 98%);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
 body {
   background: #fafafa;
   font-family: 'Poppins', 'sans-serif';
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--very-dark-blue);
   display: flex;
@@ -31,123 +24,122 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
+  padding: 0 2rem;
 }
 
-.four-card-section-header {
-  margin-top: 80px;
+.header-section {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.four-card-section-header h1 {
+.header-heading {
   font-weight: 200;
-  font-size: clamp(24px, 6.4vw, 36px);
-  line-height: clamp(36px, 9.6vw, 54px);
-  letter-spacing: clamp(0.17px, 0.0045vw, 0.25px);
-  width: clamp(297px, 78.9vw, 444px);
+  font-size: clamp(1.5rem, calc(1.2356rem + 1.12676vw), 2.25rem);
+  line-height: clamp(36px, calc(1.85rem + 1.69vw), 54px);
+  letter-spacing: clamp(0.0106rem, 0.0045vw, 0.0156rem);
+  max-width: 27.75rem;
 }
 
-.four-card-section-header h1 span {
+.header-heading span {
   font-weight: 600;
 }
 
-.four-card-section-header p {
-  margin-top: 16px;
-  font-size: 15px;
-  line-height: 25px;
+.header-paragraph {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
   text-align: center;
-  letter-spacing: 0.104167px;
-  width: clamp(311px, 83vw, 540px);
+  letter-spacing: 0.0065rem;
+  max-width: 33.75rem;
   color: var(--grayish-blue);
 }
 
-.four-card-section-main {
-  margin-top: 76px;
+.main-section {
+  margin-top: clamp(4rem, -1.13vw + 5rem, 4.75rem);
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 32px 80px 32px;
+  padding-bottom: 5rem;
 }
 
 .cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style-type: none;
-  gap: 25px;
-  max-width: 1110px;
+  display: grid;
+  place-content: center;
+  gap: 1.5625rem;
+  max-width: 69.375rem;
 }
 
 .card {
   background: #ffffff;
-  width: clamp(311px, 83vw, 350px);
-  height: clamp(195px, 60vw, 250px);
+  width: clamp(19.4375rem, calc(18.58rem + 3.66vw), 21.875rem);
+  height: clamp(12.1875rem, calc(10.98rem + 5.16vw), 15.625rem);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0px 0.9375rem 1.875rem -0.6875rem rgba(131, 166, 210, 0.5);
+  border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
 }
 
-.card .line {
+.card-line {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 3.55px;
+  height: 0.2219rem;
 }
 
-.card.supervisor .line {
+.card.supervisor .card-line {
   background-color: var(--cyan);
 }
 
-.card.team-builder .line {
+.card.team-builder .card-line {
   background-color: var(--red);
 }
 
-.card.karma .line {
+.card.karma .card-line {
   background-color: var(--orange);
 }
 
-.card.calculator .line {
+.card.calculator .card-line {
   background-color: var(--blue);
 }
 
-.card h2 {
-  margin-top: 24px;
-  margin-left: 28px;
+.card-heading {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
 }
 
-.card p {
-  margin-top: 1px;
-  margin-left: 28px;
-  margin-right: 28px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 23px;
-  letter-spacing: 0.0902778px;
+.card-paragraph {
+  margin-top: clamp(0.0625rem, calc(0.47vw - 0.05rem), 0.375rem);
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  letter-spacing: 0.0056rem;
   color: var(--grayish-blue);
   text-align: left;
   transition: all ease 0.2s;
 }
 
-.card img {
-  width: clamp(57px, 15.2vw, 64px);
-  margin-bottom: 28px;
+.card-image {
+  width: clamp(3.5625rem, calc(3.4rem + 0.66vw), 4rem);
+  align-self: flex-end;
+  margin-bottom: 0;
   margin-top: auto;
-  margin-right: 28px;
-  margin-left: auto;
 }
 
 .attribution {
   font-family: 'Montserrat', 'sans-serif';
   flex: none;
-  padding: 10px;
+  padding: 0.625rem;
   bottom: 0px;
   width: 100%;
   text-align: center;
@@ -163,4 +155,39 @@ body {
 
 .attribution a:hover {
   font-weight: 500;
+}
+
+@media (min-width: 48rem) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 78rem) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'supervisor team calculator'
+      'supervisor karma calculator';
+  }
+
+  .card.karma {
+    grid-area: karma;
+  }
+
+  .card.calculator {
+    grid-area: calculator;
+    align-self: center;
+  }
+
+  .card.team-builder {
+    grid-area: team;
+  }
+
+  .card.supervisor {
+    grid-area: supervisor;
+    align-self: center;
+  }
 }
